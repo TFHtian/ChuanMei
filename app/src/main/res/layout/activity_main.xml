@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCDCDC"
+    tools:context="com.example.administrator.chuanmei.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ffffff">
+
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@mipmap/search_bar_icon_normal"
+                    android:background="#F5F5F5"
+                    android:hint="请输入搜索内容"
+                    android:gravity="center"
+                    android:textSize="15dp">
+
+                </EditText>
+
+            </RelativeLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <!--头条-->
+        <RelativeLayout
+            android:id="@+id/rel_tt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+            <CheckBox
+                android:button="@null"
+                android:id="@+id/id_tt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@drawable/rb_co_selector"
+                android:text="头条"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:layout_gravity="center_vertical"
+                />
+
+
+        </RelativeLayout>
+            <!-- 中间的分割线 -->
+            <View
+                style="@style/md_line"
+                android:layout_gravity="center_vertical"
+                />
+            <!--备考-->
+            <RelativeLayout
+                android:id="@+id/rel_bk"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+                <CheckBox
+                    android:id="@+id/id_bk"
+                    android:button="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="备考"
+                    android:textSize="15sp"
+                    android:textColor="@drawable/rb_co_selector"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:drawableRight="@drawable/tb_zk_selector"
+                    android:paddingRight="10dp"
+                    android:checked="false"
+                    />
+            </RelativeLayout>
+            <!-- 中间的分割线 -->
+            <View
+                style="@style/md_line"
+                android:layout_gravity="center_vertical"
+                />
+            <!--视频-->
+            <RelativeLayout
+                android:id="@+id/rel_sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+                <CheckBox
+                    android:id="@+id/id_sp"
+                    android:button="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="视频"
+                    android:textSize="15sp"
+                    android:textColor="@drawable/rb_co_selector"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:drawableRight="@drawable/tb_zk_selector"
+                    android:paddingRight="10dp"
+                    android:checked="false"/>
+
+            </RelativeLayout>
+            <!-- 中间的分割线 -->
+            <View
+                style="@style/md_line"
+                android:layout_gravity="center_vertical"
+                />
+            <!--院校-->
+            <RelativeLayout
+                android:id="@+id/rel_yx"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+                <CheckBox
+                    android:id="@+id/id_yx"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="院校"
+                    android:textColor="@drawable/rb_co_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_gravity="center_vertical"
+                    />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:background="#dcdcdc">
+
+</View>
+        <com.daimajia.slider.library.SliderLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/sl_lb"
+            >
+        </com.daimajia.slider.library.SliderLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:id="@+id/lv_xw">
+        </ListView>
+    </LinearLayout>
+
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/radiogroup_home">
+
+        <RadioButton
+            style="@style/main_tab_botton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:text="热点"
+            android:drawableTop="@drawable/rb_redian_selector"
+            android:id="@+id/rb_redian"
+            android:paddingBottom="0.5dip"
+            android:paddingTop="5dip"
+            android:checked="true"/>
+
+
+        <RadioButton
+            style="@style/main_tab_botton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:text="工具"
+            android:drawableTop="@drawable/rb_gongju_selector"
+            android:id="@+id/rb_gongju"
+            android:paddingBottom="0.5dip"
+            android:paddingTop="5dip"
+            android:checked="false"/>
+
+        <RadioButton
+            style="@style/main_tab_botton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:text="问答"
+            android:drawableTop="@drawable/rb_wenda_selctor"
+            android:id="@+id/rb_wenda"
+            android:paddingBottom="2dip"
+            android:paddingTop="10dip"
+            android:checked="false"/>
+        <RadioButton
+            style="@style/main_tab_botton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:text="发现"
+            android:paddingBottom="0.5dip"
+            android:paddingTop="5dip"
+            android:drawableTop="@drawable/rb_faxian_selector"
+            android:id="@+id/rb_faxian"
+            android:checked="false"/>
+
+        <RadioButton
+            style="@style/main_tab_botton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:text="我"
+            android:paddingBottom="0.5dip"
+            android:paddingTop="5dip"
+            android:drawableTop="@drawable/rb_wo_selector"
+            android:id="@+id/rb_wo"
+            android:checked="false"/>
+
+    </RadioGroup>
+
+
+</RelativeLayout>
